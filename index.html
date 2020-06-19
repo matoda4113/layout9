@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습9</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').bxSlider({
+                auto: true,
+                speed: 1000,
+                pause: 2000,
+                mode: "fade",
+
+                //   autoControls: true,
+
+            });
+
+        });
+    </script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    /* topnav부분 */
+    nav ul {
+        list-style-type: none;
+        overflow: hidden;
+        background-color: black;
+        width: 100%;
+        /* position: fixed; */
+        /* z-index: 10; */
+        top: 0px;
+    }
+
+    nav ul li {
+        float: left;
+        list-style-type: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 20px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+
+    }
+
+    nav ul li a:hover,
+    nav ul li:hover .drop {
+        background-color: #f1f1f1;
+        color: black;
+    }
+
+
+    .last:hover {
+        background-color: tomato;
+        color: white;
+    }
+
+
+
+
+    /* 드롭박스 */
+    .dropbox {
+        display: none;
+        position: absolute;
+
+        z-index: 10;
+        min-width: 160px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropbox a {
+        color: black;
+        background-color: white;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+
+    }
+
+    nav .drop1:hover .dropbox {
+        display: block;
+    }
+
+    nav::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    /* 메인 */
+    /* home부분 슬라이드 */
+    .slider li {
+        position: relative;
+    }
+
+    .word {
+        position: absolute;
+        color: white;
+        bottom: 0%;
+        left: 35%;
+        padding: 50px;
+    }
+
+
+    .slider img {
+        width: 100%;
+        
+    }
+     h1 {
+        text-align: center;   
+    }
+    h2 {
+        text-align: center;
+    }
+    .bx-wrapper {
+        border: 0px;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">BAND</a></li>
+            <li><a href="#">TOUR</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li class="drop1"><a class="drop" href="#">MORE <span class="fa fa-caret-down"></span></a>
+                <div class="dropbox">
+                    <a href="#">Merchandise</a>
+                    <a href="#">Extras</a>
+                    <a href="#">Media</a>
+                </div>
+            </li>
+            <li style="float: right;"><a class="last" href="#"><span class="fa fa-search"></span></a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <div class="slider">
+            <li>
+                <img src="./images/1.jpg" alt="">
+                <div class="word">
+                    <h1>New York<h1><br>
+                            <h2>The atmosphere in New York is lorem ipsum.</h2>
+                </div>
+            </li>
+            <li><img src="./images/2.jpg" alt="">
+                <div class="word">
+                    <h1>New York<h1><br>
+                            <h2>The atmosphere in New York is lorem ipsum.</h2>
+                </div>
+            </li>
+            <li><img src="./images/3.jpg" alt="">
+                <div class="word">
+                    <h1>New York<h1><br>
+                            <h2>The atmosphere in New York is lorem ipsum.</h2>
+                </div>
+            </li>
+
+
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div></div>
+    </footer>
+
+
+</body>
+
+</html>
